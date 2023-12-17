@@ -1,0 +1,37 @@
+@import url('form.css');
+@import url('index.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&display=swap');
+
+:root{
+
+    --cor-azul-escuro: #01080E;
+    --cor-branco: #D7F9FF;
+    --cor-terciaria: #2BDEFD;
+    --cor-azul-marinho: #091353;
+    --cor-hover: #D7F9FF;
+    --cor-titulo: #455a64;
+
+    --font-primaria: 'Inter', sans-serif;
+    --font-secundaria: 'Inter', sans-serif;
+    --font-tech: 'Chakra Petch', sans-serif;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(
+        338deg,
+        var(--cor-azul-marinho)10%,
+        var(--cor-azul-escuro)60%
+    );
+    color: var(--cor-branco);
+    font-family: var(--font-secundaria);
+
+}
