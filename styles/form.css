@@ -1,137 +1,41 @@
-.contact{
+.contact {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Use min-height para garantir que ocupe pelo menos 100% da altura da tela */
     box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.2);
-
-}
-
-.contact__box{
+  }
+  
+  .contact__box {
     display: flex;
     background: #fff;
     box-shadow: 3px 3px 25px 6px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-
     width: 100%;
     max-width: 1200px;
-}   
-
-.contact__box__form{
+    flex-direction: column; /* Alterado para coluna em telas menores */
+  }
+  
+  .contact__box__form {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-
-    flex: 1;
-    padding: 60px;
-}
-
-.contact__box__form h1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--font-tech);
-    font-size: 1.5rem;
-    color: var(--cor-azul-marinho);
-}
-
-.contact__box__form__inputs{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-
-}
-
-label{
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-
-    font-size: 14px;
-    letter-spacing: -0.3px;
-    font-weight: 400;
-    color: var(--cor-azul-escuro);
-
-    position: relative;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-}
-
-label:focus-within, label.active{
-    color: var(--cor-azul-marinho);
-}
-
-label:focus-within::after, label.active::after{
-    transform: scale(1);
-}
-
-label::after{
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s;
-
-    width: 100%;
-    height: 2px;
-    background: var(--cor-azul-marinho);
-}
-
-label:last-child{
-    grid-column: 1 / 3;
-}
-
-
-label input{
-    font-size: 1.13rem;
-    border: 0;
-    outline: 0;
-    background: transparent;
-
-}
-
-.contact__box__form button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 8px;
-
-    align-self: center;
-    width: 400px;
-    height: 50px;
-
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--cor-azul-escuro);
-    background: var(--cor-terciaria);
-    border-radius: 6px;
-    border: 0;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.contact__box__form button:hover{
-    background: var(--cor-azul-marinho);
-    color: var(--cor-branco);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    padding: 40px; /* Reduzido o padding para melhor se adaptar a telas menores */
+  }
+  
+  /* ... Outros estilos ... */
+  
+  /* Ajustes para telas menores */
+  @media (max-width: 768px) {
+    .contact__box__form {
+      padding: 20px; /* Reduzir ainda mais o padding para telas menores */
+    }
+  
+    .contact__box__form button {
+      width: 100%; /* Fazer o botão ocupar a largura total */
+    }
+  
+    /* Exemplos adicionais de ajustes para telas menores conforme necessário */
+  }
+  
